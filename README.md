@@ -17,15 +17,12 @@
   <a href="#credits">Credits</a> 
 </p>
 
-<p align="center"><img width="900px" src="thumbnail.png"/></p>
+<p align="center"><img width="900px" src="https://github.com/lauramunozcaiced/ltodos/blob/main/public/thumbnail.png"/></p>
 
 ## Key Features
 
-- Machine learning unsupervised clustering
-  - Thanks to k-means algorithm we can cluster the colors and select the most representatives
-  - This could have been done with an histogram, but where is the fun on that?
-- Pyscript proxy with javascript events
-  - Pyscript allows the communication between js and python by proxies and specific attributes.
+- React project to create and manage TODOs, where I worked with hooks, context, and local storage. 
+
 
 ## How To Use
 
