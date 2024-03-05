@@ -1,78 +1,59 @@
-# ltodos
-TODOs Aplication in React 
+<h1 align="center">
+     L-TODOs Machine with React
+  <br>
+</h1>
 
-# Repositorio base del Curso de Introducción a React.js en Platzi
+<h4 align="center">A TODOs project built with React</h4>
 
-¡Hola, Platzinauta!
+<p align="center">
+<img alt="Framework" src="https://img.shields.io/badge/framework-React-blue">
+<img alt="Platzi Course" src="https://img.shields.io/badge/Platzi_Course-Course?logo=platzi">
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+<p align="center">Badges from <a href="https://shields.io/badges" target="_blank">Shields.io</a></p>
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#credits">Credits</a> 
+</p>
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+<p align="center"><img width="900px" src="thumbnail.png"/></p>
 
-## Getting Started with Create React App
+## Key Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Machine learning unsupervised clustering
+  - Thanks to k-means algorithm we can cluster the colors and select the most representatives
+  - This could have been done with an histogram, but where is the fun on that?
+- Pyscript proxy with javascript events
+  - Pyscript allows the communication between js and python by proxies and specific attributes.
 
-## Available Scripts
+## How To Use
 
-In the project directory, you can run:
+To clone and run this application, you'll need [Git](https://git-scm.com). From your command line:
 
-### `npm start`
+```bash
+# Clone this repository
+$ git clone https://github.com/lauramunozcaiced/ltodos.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+$ cd ltodos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+$ npm start
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once the app is on you can go to `http://localhost:3000` and play around.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credits
 
-### `npm run eject`
+This project was made following the Reac Course in Platzi:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Curso de React.js](https://platzi.com/cursos/react/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Built with <span role="img" aria-label="heart emoji">💖</span> By Laura Muñoz Caicedo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> GitHub [@lauramunozcaiced](https://github.com/lauramunozcaiced)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
