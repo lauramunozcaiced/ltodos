@@ -1,0 +1,110 @@
+.taskCount{
+    color: var(--white);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: var(--primaryLight);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: calc(22px*4);
+    transition: all .5s;
+}
+
+.taskCount_bar, .taskCount::after{
+    content: '';
+    height: 6px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    
+}
+.taskCount_bar{
+    background-color: var(--green);
+    border-top-right-radius: 6px;
+    z-index: 1;
+    width: 0%;
+    transition: all .5s;
+}
+.taskCount::after{
+    background-color: #424371;
+    width: 100%;
+}
+.taskCount.completed{
+ background-color: var(--darkGreen);
+ opacity: .5;
+}
+.taskCount .informationContainer{
+    padding: .8rem .5rem;
+}
+.taskCount .informationContainer p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+}
+.taskCount .informationContainer .description{
+    font-weight: 300;
+    font-size: 14px;
+}
+.taskCount .informationContainer .priority{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.taskCount .informationContainer .priority.high{
+    color: var(--red);
+}
+.taskCount .informationContainer .priority.medium{
+    color: var(--orange);
+}
+.taskCount .informationContainer .priority.low{
+    color: var(--yellow);
+}
+.taskCount .informationContainer .priority.completed{
+    color: var(--green);
+}
+.taskCount .goalContainer{
+    text-align: right;
+    display: grid;
+    align-content: center;
+    justify-items: end;
+    padding: .8rem 2.8rem .8rem .5rem;
+}
+
+.taskCount .goalContainer button{
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--white);
+}
+.taskCount .goalContainer p{
+    font-size: 15px;
+    font-style: italic;
+}
+.taskCount .goalContainer p b{
+    font-size: 18px;
+    font-style: normal;
+}
+.taskCount .goalContainer p.completed b{
+    font-size: 14px;
+    font-style: normal;
+}
+.taskCount .goalContainer .goal{
+    display: flex;
+    align-items: center;
+}
+.taskCount .goalContainer .goal p{
+    margin: 0 .3rem ;
+}
+.taskCount .goalContainer .goal button{
+    padding: .1rem;
+    border-radius: 50px;
+    opacity: .5;
+}
+.taskCount .goalContainer .goal button:hover{
+    opacity: 1;
+}

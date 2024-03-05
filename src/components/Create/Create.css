@@ -1,0 +1,30 @@
+.createButton{
+    position: absolute;
+    bottom: 0;
+    right: 19px;
+    display: flex;
+    flex-direction: column;
+}
+.createButton .fa-hand-point-down{
+    font-size: 25px;
+    color: var(--yellow);
+}
+.createButton button{
+    box-shadow: 0 2px 3px var(--primaryDark);
+    margin: 1rem;
+    float: right;
+    padding: .6rem;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--primaryLight);
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primaryDark);
+    cursor: pointer;
+    transform: rotate(0);
+    transition: .3s ease;
+}
+
+.createButton button:hover{
+    transform: rotate(224deg);
+}

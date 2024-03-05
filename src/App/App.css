@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+
+:root{
+  --primary: #201F34;
+  --primaryLight: #36365E;
+  --primaryDark: #14132A;
+  --red: #c5544e;
+  --orange: #EF7C49;
+  --yellow: #F9CC68;
+  --green: #bcff9b;
+  --darkGreen : #3a8b3a;
+  --white: #FFF;
+  --gray: #ebebeb;
+  --whiteOpacity : #ffffff5e;
+  --black: #000;
+  --font: 'DM Sans', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  max-width: 900px;
+  min-height: 93vh;
+  margin: 0 auto;
+  background-color: var(--primary);
+  font-family: var(--font);
+  padding: 3rem 2.5rem 1rem 2.5rem;
+  color: var(--white);
+  position: relative;
+}
+.head .logoContainer{
+  text-align: right;
+}
+.head .logoContainer img{
+  opacity: .7;
+}
+.head p{
+  font-weight: 100;
+  font-size: 24px;
+  margin-bottom: .5rem;
+}
+.head p .fa-hand-peace{
+  color: var(--yellow);
+}
+.head h2{
+  font-size: 52px;
+  line-height: 1;
+}
+.head .searchContainer{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tasks p{
+font-size: 17px;
+font-weight: 200;
+}

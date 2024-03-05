@@ -1,0 +1,39 @@
+.search{
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    opacity: 0.7;
+    transition: all .2s;
+}
+.search:hover{
+    opacity: 1;
+}
+.search::before{
+    content: "\f0d1";
+    position: absolute;
+    color: var(--white);
+    right: 0;
+    font-family: remixicon!important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    padding: .5rem;
+    cursor: pointer;
+    
+}
+.search input{
+    background-color: var(--primaryDark);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: .5rem;
+    font-size: 14px;
+    font-family: var(--font);
+    width: -webkit-fill-available;
+    padding-right: 27px;
+    font-weight: 300;
+}
+.search input::placeholder{
+    color: var(--whiteOpacity);
+}
+
+

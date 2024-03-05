@@ -1,0 +1,9 @@
+.counter{
+    font-size: 17px!important;
+    margin-top: 17px;
+    font-weight: 500!important;
+}
+.counter b{
+    color: var(--yellow);
+    font-weight: 700;
+}

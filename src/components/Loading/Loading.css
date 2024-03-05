@@ -1,0 +1,57 @@
+.skeleton-loading .text-loading{
+    height: 22px;
+    width: 115px;
+    border-radius: 5px;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.skeleton-loading .taskList-loading{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+    height: 150px;
+}
+
+.skeleton-loading .taskTime-loading{
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    width: 270px;
+    height: 127.97px;
+    position: relative;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.skeleton-loading .taskGrid-loading{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+
+.skeleton-loading .taskCount-loading{
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: calc(22px*4);
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes loading {
+    0% {background-color:  var(--primaryDark)}
+    50% {background-color:  #2d2b49}
+    100% {background-color:  var(--primaryDark)}
+  }

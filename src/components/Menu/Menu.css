@@ -1,0 +1,82 @@
+.menucount{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    display: flex;
+}
+
+.menucount .menuTask, .menutime .menuTask{
+    list-style: none;
+    width: fit-content;
+
+}
+.menucount li{
+    height: 22px;
+    width: 0px;
+    opacity: 0;
+    transition: width .2s;
+}
+.menucount.active li {
+    width: 26px;
+    opacity: 1;
+    transition: all .3s;
+}
+.menucount .menuTask li button{
+    font-family: var(--font);
+    font-weight: 300!important;
+    transition: all .5s;
+    height: 100%;
+    width: 100%;
+    font-size: 15.5px;
+    transition: all .5s;
+    border: none;
+    cursor: pointer;
+    background-color: var(--yellow);
+    border-top: 1px solid #fdfdfd80;
+    color: var(--black);
+}
+
+.menucount .menuTask li:nth-child(1) button{
+    border-top: none;
+}
+
+.menucount .ri-more-2-line{
+    font-weight: 900;
+    width: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2f304f;
+    border-top-right-radius: 6px ;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.menucount .menuTask li button:hover{
+    background-color: #f9b021;
+}
+
+.menutime .menuTask{
+    display: flex;
+    float: right;
+    margin-top: .7rem;
+    gap: 2px;
+}
+.menutime .menuTask li{
+   width: 25px;
+   height: 22px;
+}
+.menutime .menuTask li button{
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    font-size: 15.5px;
+    font-weight: 500;
+ }
+ .menutime .menuTask li button:hover{
+    background-color: #00000021;
+}
+.menutime .ri-more-2-line{
+    display: none;
+}

@@ -1,0 +1,107 @@
+.taskTime{
+    margin-bottom: 1rem;
+    padding: .9rem .8rem .4rem .8rem;
+    color: var(--black);
+    border-radius: 6px;
+    min-width: 260px;
+    height: fit-content;
+    position: relative;
+    transition: all .5s;
+}
+.taskTime.high{
+    background-color: var(--red);
+}
+.taskTime.medium{
+    background-color: var(--orange);
+}
+.taskTime.low{
+    background-color: var(--yellow);
+}
+.taskTime.completed{
+    background-color: var(--darkGreen)!important;
+    color: var(--white);
+    opacity: .5;
+}
+.taskTime .completeText{
+    color: var(--green);
+    letter-spacing: 1px;
+    font-size: 11px!important;
+    font-weight: 900!important;
+}
+.taskTime.completed button{
+    color: var(--white);
+}
+.taskTime.completed .timeContainer .barContainer .progress .bar{
+    background-color: var(--green);
+}
+.taskTime.completed .informationContainer div p{
+    font-weight: 600;
+}
+.taskTime .informationContainer{
+    display:  flex;
+    justify-content: space-between;
+}
+.taskTime .informationContainer div p{
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -1px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+.taskTime .informationContainer div span{
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: -.5px;
+}
+.taskTime button{
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+}
+.taskTime .timeContainer{
+    text-align: right;
+}
+
+.taskTime .timeContainer .goalContainer{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.taskTime .timeContainer .goalContainer .goal{
+    font-weight: 500;
+    font-size: 10px;
+    font-style: italic;
+    letter-spacing: -.4px;
+}
+
+.taskTime .timeContainer span{
+   font-weight: 700;
+   font-size: 14px;
+}
+.taskTime .timeContainer .barContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.taskTime .timeContainer .barContainer .progress{
+    width: 100%;
+    height: 6px;
+    margin-left: 10px;
+    background-color: var(--whiteOpacity);
+    position: relative;
+    border-radius: 3px;
+}
+.taskTime .timeContainer .barContainer .progress .bar{
+    height: 100%;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transition: all .5s;
+}
+.hide{
+    display: none;
+}
