@@ -23,6 +23,8 @@ function Provider({ children }) {
     const countTODOs = searchedTodos.filter(todo => todo.type === 'count')
     const timeTODOs = searchedTodos.filter(todo => todo.type === 'time')
 
+    const completeAudio = new Audio('./completed.mp3');
+
     const runTimeTask = (id) => {
         const newTodos = [...todos];
         const index = newTodos.findIndex(todo => todo.id === id);
@@ -55,7 +57,7 @@ function Provider({ children }) {
             newTodos[index].achieved = (sum === true) ? (parseInt(newTodos[index].achieved) + 1).toString() : (parseInt(newTodos[index].achieved) - 1).toString();
             newTodos[index].percentage = (100 * parseInt(newTodos[index].achieved)) / goal;
             if (goal === parseInt(newTodos[index].achieved)) {
-                newTodos[index].isCompleted = true;
+                completeTask(id);
             }
         }
         setTodos(newTodos);
@@ -91,6 +93,8 @@ function Provider({ children }) {
 
         setTodos(newTodos);
         updateLocalStorage(newTodos);
+        completeAudio.play();
+        console.log('Should play audio');
     }
 
     const resetTask = (id) => {
@@ -216,7 +220,7 @@ function Provider({ children }) {
                             setTime(`${addPadding(hoursRun)}:${addPadding(minutesRun)}:${addPadding(secondsRun)}`);
 
                         } else {
-                            newTodos[index].isCompleted = true;
+                            completeTask(todoTimer);
                             clearInterval(timer)
                         }
                     } else if (newTodos[index].state === 'reset') {
