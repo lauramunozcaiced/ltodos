@@ -47,7 +47,7 @@ input, select, textarea{
     font-family: var(--font);
 }
 
-select{
+form select{
     height: 46px!important;
 }
 
