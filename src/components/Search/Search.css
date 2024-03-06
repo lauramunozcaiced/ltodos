@@ -18,6 +18,7 @@
     -webkit-font-smoothing: antialiased;
     padding: .5rem;
     cursor: pointer;
+    top: 7px;
     
 }
 .search input{
@@ -31,6 +32,7 @@
     width: -webkit-fill-available;
     padding-right: 27px;
     font-weight: 300;
+    height: 15px;
 }
 .search input::placeholder{
     color: var(--whiteOpacity);
