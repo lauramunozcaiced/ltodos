@@ -16,6 +16,7 @@ import { Empty } from '../components/Empty/Empty';
 import { Context } from '../Context/Context';
 import { Modal } from '../components/Modal/Modal';
 import { Form } from '../components/Form/Form';
+import { Name } from '../components/Name/Name';
 
 /*Font Awesome */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -30,7 +31,6 @@ import 'animate.css';
 
 function AppUI() {
     const {
-        ownerName,
         todos,
         loading,
         error,
@@ -50,7 +50,12 @@ function AppUI() {
         setOpenModal,
         editTask,
         setPreloadInfo,
-        preloadInfo
+        preloadInfo,
+        openName,
+        setOpenName,
+        ownerName,
+        setOwnerName,
+        saveOwnerName
     } = React.useContext(Context);
 
     return (
@@ -60,7 +65,7 @@ function AppUI() {
                     <div className='logoContainer'>
                         <img src={logo} width={40} />
                     </div>
-                    <p><FontAwesomeIcon icon={faHandPeace} /> Hello, {ownerName}!</p>
+                    <p><FontAwesomeIcon icon={faHandPeace} /> Hello, <b className='link' onClick={()=> {setOpenName(true)}}>{(ownerName!= '')? ownerName : 'Friend'}</b></p>
                     <h2>Manage <br></br>your tasks</h2>
                     <Counter completed={completedTodos.length} total={todos.length} />
                     <div className='searchContainer'>
@@ -108,7 +113,19 @@ function AppUI() {
                         </div>
                     </Modal>
                 )}
-                
+                {openName && (
+                    <Name>
+                        <div>
+                        <button onClick={()=>{
+                                setOpenName(false);
+                                (ownerName === '') && setOwnerName('')}} className='close ri-arrow-go-back-line'></button>
+                        <div>Hi friend, first ...</div>
+                        <h4 className='title'>how would you like us to tell you?</h4>
+                        <input type='text' onChange={(e)=> {setOwnerName(e.target.value)}} value={ownerName}/>
+                        <button className='submit' onClick={saveOwnerName}>Save</button>
+                        </div>
+                    </Name>
+                )}
             </div>
             </React.Fragment>
     )

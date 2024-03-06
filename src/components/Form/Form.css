@@ -34,7 +34,7 @@ form{
     width: 100%;
 }
 
-form input, select, textarea{
+input, select, textarea{
     width: -webkit-fill-available;
     background-color: var(--primary);
     border: none;
@@ -47,11 +47,11 @@ form input, select, textarea{
     font-family: var(--font);
 }
 
-form select{
+select{
     height: 46px!important;
 }
 
-form button {
+button.submit {
     background-color: var(--yellow);
     padding: 0.6rem 3rem;
     color: var(--black);

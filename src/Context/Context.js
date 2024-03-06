@@ -4,16 +4,17 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 const Context = React.createContext();
 
 function Provider({ children }) {
-    const ownerName = 'Laura';
     const [{ item: todos,
         setItem: setTodos,
         updateLocalStorage,
         loading,
         error
     }] = useLocalStorage('TODOS_V1', []);
+    const [ownerName, setOwnerName] = React.useState('');
     const [search, setSearch] = React.useState('');
     const [todoTimer, setTodoTimer] = React.useState(null);
     const [openModal, setOpenModal] = React.useState(false);
+    const [openName, setOpenName] = React.useState(false);
     const [time, setTime] = React.useState('00:00:00');
     const [preloadInfo, setPreloadInfo] = React.useState(null);
 
@@ -24,6 +25,12 @@ function Provider({ children }) {
     const timeTODOs = searchedTodos.filter(todo => todo.type === 'time')
 
     const completeAudio = new Audio('./completed.mp3');
+
+    const saveOwnerName = () => {
+        localStorage.setItem('ownerName',ownerName);
+        setOwnerName(localStorage.getItem('ownerName'));
+        setOpenName(false);
+    }
 
     const runTimeTask = (id) => {
         const newTodos = [...todos];
@@ -144,7 +151,14 @@ function Provider({ children }) {
             return `${num.toString()}`;
         }
     }
-
+    React.useEffect(()=> {
+        const localStorageName = localStorage.getItem('ownerName');
+        if(!localStorageName){
+            setOpenName(true);
+        }else{
+            setOwnerName(localStorageName);
+        }
+    },[])
 
     React.useEffect(() => {
         if (todoTimer !== null) {
@@ -241,7 +255,6 @@ function Provider({ children }) {
 
     return (
         <Context.Provider value={{
-            ownerName,
             todos,
             loading,
             error,
@@ -264,6 +277,11 @@ function Provider({ children }) {
             editTask,
             preloadInfo, 
             setPreloadInfo,
+            setOpenName,
+            openName,
+            ownerName,
+            setOwnerName,
+            saveOwnerName
         }}>
             {children}
         </Context.Provider>

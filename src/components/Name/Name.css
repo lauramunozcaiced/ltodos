@@ -1,0 +1,21 @@
+.nameModal{
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    background-color: rgba(0, 0, 0, 0.393);
+}
+.nameModalContent{
+    background-color: var(--primaryLight);
+    border-radius: 20px;
+    padding: 1.8rem 1rem;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
+    color: var(--white);
+     width: 50vh;
+    overflow-y: auto;
+}

@@ -102,7 +102,7 @@ function Form() {
                     </select>
                 </div>
                 <div>
-                    <button type="submit">Save</button>
+                    <button type="submit" className="submit">Save</button>
                 </div>
             </form>
         </>

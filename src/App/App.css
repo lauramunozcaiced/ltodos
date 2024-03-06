@@ -58,3 +58,8 @@
 font-size: 17px;
 font-weight: 200;
 }
+
+.link{
+    font-weight: 400;
+    cursor: pointer;
+}
