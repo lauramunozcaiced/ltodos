@@ -17,7 +17,7 @@
   <a href="#credits">Credits</a> 
 </p>
 
-<p align="center"><img width="900px" src="https://github.com/lauramunozcaiced/ltodos/blob/main/public/thumbnail.png"/></p>
+<p align="center"><a href="https://lauramunozcaiced.github.io/ltodos/" target="_blank"><img width="900px" src="https://github.com/lauramunozcaiced/ltodos/blob/main/public/thumbnail.png"/></a></p>
 
 ## Key Features
 
@@ -38,7 +38,8 @@ $ npm start
 
 ```
 
-Once the app is on you can go to `http://localhost:3000` and play around.
+Once the app is on you can go to `http://localhost:3000` and play around. You can use the page to manage your TODOS in this link:
+[L-TODOS Page](https://lauramunozcaiced.github.io/ltodos/)
 
 <br>
 
