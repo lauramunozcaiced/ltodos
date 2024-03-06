@@ -131,7 +131,7 @@ function Provider({ children }) {
     const addTask = (params) => {
         const newTodos = [...todos];
        newTodos.push({
-            id: newTodos[newTodos.length - 1].id + 1, 
+            id: (newTodos.length > 0) ? newTodos[newTodos.length - 1].id + 1: 1, 
             ...params,
             achieved: (params.type === 'time')? '00:00:00' : '0', 
             state: (params.type === 'time')?'init':'' , 
