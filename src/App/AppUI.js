@@ -55,7 +55,8 @@ function AppUI() {
         setOpenName,
         ownerName,
         setOwnerName,
-        saveOwnerName
+        saveOwnerName,
+        startTracker
     } = React.useContext(Context);
 
     return (
@@ -81,10 +82,18 @@ function AppUI() {
                         <div className='timeTasks'>
                             <p>Time tasks ({searchedTodos.filter(todo => todo.type === 'time').length})</p>
                             <List type='scroll'>
-                                {(timeTODOs.length > 0) ? (timeTODOs.map(todo => (<ItemTime setPreloadInfo={()=> {setPreloadInfo(todo)}} run={() => { runTimeTask(todo.id) }} pause={() => pauseTimeTask(todo.id)} key={todo.id} text={todo.text}
-                                    description={todo.description} priority={todo.priority} achieved={todo.achieved} goal={todo.goal} isCompleted={todo.isCompleted} edit={editTask}
-                                    percentage={todo.percentage} reset={() => { resetTask(todo.id) }} state={todo.state} delete={() => { removeTask(todo.id) }} openModal={()=>{setOpenModal(true)}} 
-                                    complete={() => { completeTask(todo.id) }} />))) : (<small>There are not TODOS to show</small>)}
+                                {(timeTODOs.length > 0) ? (timeTODOs.map(todo => (<ItemTime 
+                                setPreloadInfo={()=> {setPreloadInfo(todo)}} 
+                                run={() => { runTimeTask(todo.id) }} 
+                                pause={() => pauseTimeTask(todo.id)} 
+                                key={todo.id} 
+                                todo={todo} 
+                                edit={editTask}
+                                reset={() => { resetTask(todo.id) }} 
+                                delete={() => { removeTask(todo.id) }} 
+                                openModal={()=>{setOpenModal(true)}} 
+                                complete={() => { completeTask(todo.id) }} 
+                                />))) : (<small>There are not TODOS to show</small>)}
                             </List>
                         </div>
                         <div className='countTask'>

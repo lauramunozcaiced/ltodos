@@ -18,7 +18,7 @@
     background-color: var(--yellow);
 }
 .taskTime.completed{
-    background-color: var(--darkGreen)!important;
+    background-color: var(--primaryLight)!important;
     color: var(--white);
     opacity: .5;
 }
@@ -41,7 +41,7 @@
     display:  flex;
     justify-content: space-between;
 }
-.taskTime .informationContainer div p{
+.taskTime .informationContainer div p.title{
     font-weight: 800;
     font-size: 18px;
     letter-spacing: -1px;
@@ -49,10 +49,12 @@
     margin: 0;
     line-height: 1;
 }
-.taskTime .informationContainer div span{
+.taskTime .informationContainer div p.description{
     font-weight: 400;
     font-size: 15px;
     letter-spacing: -.5px;
+    height: 40px;
+    overflow: hidden;
 }
 .taskTime button{
     height: fit-content;
@@ -98,8 +100,7 @@
     background-color: var(--black);
     position: absolute;
     left: 0;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border-radius: 3px;
     transition: all .5s;
 }
 .hide{

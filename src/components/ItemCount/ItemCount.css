@@ -32,7 +32,7 @@
     width: 100%;
 }
 .taskCount.completed{
- background-color: var(--darkGreen);
+ background-color: var(--primaryLight);
  opacity: .5;
 }
 .taskCount .informationContainer{
@@ -46,6 +46,8 @@
 .taskCount .informationContainer .description{
     font-weight: 300;
     font-size: 14px;
+    height: 28px;
+    overflow: hidden;
 }
 .taskCount .informationContainer .priority{
     text-transform: uppercase;

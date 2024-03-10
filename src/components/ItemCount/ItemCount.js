@@ -14,7 +14,7 @@ function ItemCount(props){
           (<span className={`priority ${props.priority}`}>{props.priority}</span>)}
           
           <p>{props.text}</p>
-          <p className='description'>{(props.description !== '')? props.description: 'No description'}</p>
+          <p className='description'>{(props.description !== '')&& props.description}</p>
         </div>
         <div className="goalContainer">
           {(props.isCompleted === true)? 
