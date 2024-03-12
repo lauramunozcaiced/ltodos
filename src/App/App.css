@@ -63,3 +63,46 @@ font-weight: 200;
     font-weight: 400;
     cursor: pointer;
 }
+
+@keyframes heartbeat {
+  0% {
+    font-size: 13px;
+  }
+  20% {
+    font-size: 16px;
+  }
+  40% {
+    font-size: 13px;
+  }
+  60% {
+    font-size: 16px;
+  }
+  80% {
+    font-size: 13px;
+  }
+  100% {
+    font-size: 13px;
+  }
+}
+
+.mySign .heartBeat{
+  animation: heartbeat 1s infinite;
+  color: var(--yellow);
+  min-width: 16px;
+  width: 16px!important;
+  display: inline-block;
+}
+
+.mySign{
+  position: fixed;
+  bottom: 0;
+  color: var(--white);
+  font-size: 14px;
+  font-family: var(--font);
+  padding: .5rem 1rem;
+
+}
+
+.mySign .important{
+  color: var(--yellow);
+}

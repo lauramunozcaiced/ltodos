@@ -136,6 +136,7 @@ function AppUI() {
                     </Name>
                 )}
             </div>
+            <div className='mySign'><p>Coded with <i className="ri-heart-3-fill heartBeat"></i> by  <a className='important' href="https://github.com/lauramunozcaiced" target="_blank"><i className="ri-github-fill"></i>lauramunozcaiced</a>.</p></div>
             </React.Fragment>
     )
 }
